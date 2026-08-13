@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vaishnavi Palivela — ServiceNow-focused Computer Science graduate, CSA & CAD certified." />
+  <title>Palivela Veera Vaishnavi Sandhya | ServiceNow Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#071018; --panel:#0d1822; --panel2:#101f2b; --text:#eef7ff;
+      --muted:#9bb0c0; --line:rgba(255,255,255,.09); --accent:#55d6be;
+      --accent2:#63a4ff; --shadow:0 24px 70px rgba(0,0,0,.35); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:radial-gradient(circle at 80% 10%,rgba(99,164,255,.12),transparent 28%),radial-gradient(circle at 10% 20%,rgba(85,214,190,.08),transparent 24%),var(--bg);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,92%);margin:auto}
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1100px,90%);z-index:20;padding:12px 16px;border:1px solid var(--line);background:rgba(7,16,24,.72);backdrop-filter:blur(18px);border-radius:18px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.03em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:20px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--text)}
+    .menu{display:none;background:none;border:0;color:var(--text);font-size:22px}
+    .hero{min-height:100vh;display:grid;align-items:center;padding:150px 0 90px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(85,214,190,.25);background:rgba(85,214,190,.07);padding:7px 12px;border-radius:999px;color:#b8f4e8;font-size:13px;margin-bottom:22px}
+    .dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 16px var(--accent)}
+    h1,h2,h3{font-family:"Space Grotesk";line-height:1.08;letter-spacing:-.04em}
+    h1{font-size:clamp(48px,7vw,84px);max-width:800px}.gradient{background:linear-gradient(100deg,#fff 25%,#8debdc 58%,#7eaaff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:var(--muted);max-width:670px;margin:25px 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 18px;border-radius:13px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.25s}.btn.primary{background:var(--accent);color:#06120f;border-color:transparent}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+    .hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,31,43,.92),rgba(10,22,31,.88));border-radius:28px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(85,214,190,.12);filter:blur(35px);top:-90px;right:-70px}
+    .profile-head{display:flex;gap:16px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line)}
+    .avatar{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#163b43,#17305a);font:700 22px "Space Grotesk";color:#bdf9ed}
+    .profile-head h3{font-size:20px}.profile-head small{color:var(--muted)}
+    .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.stat{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.stat b{display:block;font:700 25px "Space Grotesk";color:var(--accent)}.stat span{font-size:12px;color:var(--muted)}
+    section{padding:105px 0}.section-label{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);font-weight:700;margin-bottom:12px}h2{font-size:clamp(34px,5vw,52px);margin-bottom:16px}.lead{color:var(--muted);max-width:720px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:45px}.card{background:rgba(13,24,34,.7);border:1px solid var(--line);border-radius:var(--radius);padding:28px}.card h3{font-size:21px;margin-bottom:14px}.card p{color:var(--muted)}
+    .focus{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.focus .mini{padding:18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.025)}.mini strong{display:block;margin-bottom:5px}.mini span{font-size:13px;color:var(--muted)}
+    .cert-grid,.project-grid,.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+    .cert,.project{border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,31,43,.8),rgba(10,19,27,.8));border-radius:20px;padding:24px;transition:.25s}.cert:hover,.project:hover{transform:translateY(-5px);border-color:rgba(85,214,190,.3)}
+    .badge{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:rgba(85,214,190,.1);color:var(--accent);font-weight:800;margin-bottom:18px}.cert h3,.project h3{font-size:21px;margin-bottom:7px}.muted{color:var(--muted);font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tag{font-size:12px;color:#c8d7e2;padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025)}
+    .project.featured{grid-column:1/-1;border-color:rgba(85,214,190,.24);background:linear-gradient(145deg,rgba(16,42,43,.62),rgba(10,21,29,.9))}
+    .project-top{display:flex;justify-content:space-between;gap:20px}.project-link{color:var(--accent);font-weight:700;font-size:13px}
+    .timeline{margin-top:42px;border-left:1px solid var(--line);padding-left:28px}.timeline-item{position:relative;padding:0 0 38px}.timeline-item:before{content:"";position:absolute;left:-34px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(85,214,190,.09)}.timeline-item h3{font-size:21px}.timeline-item .date{color:var(--accent);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}.timeline-item p{color:var(--muted);margin-top:8px}
+    .skill-grid{grid-template-columns:repeat(3,1fr)}.skill{padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.skill h3{font-size:17px;margin-bottom:9px}.skill p{color:var(--muted);font-size:13px}
+    .contact{border:1px solid rgba(85,214,190,.18);background:linear-gradient(135deg,rgba(85,214,190,.08),rgba(99,164,255,.07));border-radius:28px;padding:45px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact p{color:var(--muted);max-width:600px}
+    footer{padding:35px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}.footer{display:flex;justify-content:space-between;gap:20px}
+    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:850px){.navlinks{display:none}.menu{display:block}.hero-grid,.about-grid{grid-template-columns:1fr}.cert-grid,.project-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr 1fr}.hero{padding-top:130px}.contact{flex-direction:column;align-items:flex-start}}
+    @media(max-width:520px){section{padding:75px 0}.skill-grid,.focus{grid-template-columns:1fr}.nav{top:10px}.hero{padding-top:115px}h1{font-size:48px}.contact{padding:28px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#home">V<span>P</span>.</a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#servicenow">ServiceNow</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <div class="eyebrow"><span class="dot"></span> ServiceNow-focused developer · Open to opportunities</div>
+          <h1>Building <span class="gradient">smarter workflows</span> with ServiceNow.</h1>
+          <p>
+            I'm <strong>Palivela Veera Vaishnavi Sandhya</strong>, a Computer Science graduate and ServiceNow-focused developer
+            with a strong interest in application development, automation, ITSM and platform customization.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore My Work</a>
+            <a class="btn" href="#contact">Let's Connect</a>
+          </div>
+        </div>
+        <aside class="hero-card reveal">
+          <div class="profile-head">
+            <div class="avatar">VP</div>
+            <div><h3>Vaishnavi Sandhya</h3><small>ServiceNow Developer</small></div>
+          </div>
+          <div class="statgrid">
+            <div class="stat"><b>CSA</b><span>Certified System Administrator</span></div>
+            <div class="stat"><b>CAD</b><span>Certified Application Developer</span></div>
+            <div class="stat"><b>8.23</b><span>B.Tech CGPA · JNTUK</span></div>
+            <div class="stat"><b>2026</b><span>Computer Science Graduate</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">01 · About</div>
+        <h2>A developer with a platform-first mindset.</h2>
+        <p class="lead">I enjoy turning requirements into structured applications, clean user experiences and automated workflows. My current career focus is ServiceNow development and platform engineering.</p>
+        <div class="about-grid">
+          <div class="card reveal">
+            <h3>Who I am</h3>
+            <p>I completed my B.Tech in Computer Science through lateral entry after a Diploma in Computer Engineering. Alongside web development, I have built a strong foundation in ServiceNow and earned both CSA and CAD certifications.</p>
+            <div class="focus">
+              <div class="mini"><strong>Platform</strong><span>ServiceNow development</span></div>
+              <div class="mini"><strong>Mindset</strong><span>Automation & problem solving</span></div>
+              <div class="mini"><strong>Goal</strong><span>Grow as a ServiceNow developer</span></div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3>What I bring</h3>
+            <p>Hands-on exposure to scoped applications, tables, fields, roles, ACLs, Flow Designer, Service Catalog, UI Policies, CMDB concepts and application development workflows.</p>
+            <div class="tags">
+              <span class="tag">ServiceNow</span><span class="tag">ITSM</span><span class="tag">Flow Designer</span><span class="tag">Application Development</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicenow">
+      <div class="wrap">
+        <div class="section-label">02 · ServiceNow</div>
+        <h2>My core platform.</h2>
+        <p class="lead">ServiceNow is the center of my current learning and career direction. I am building practical application-development skills while strengthening my understanding of the platform.</p>
+        <div class="cert-grid">
+          <div class="cert reveal"><div class="badge">✓</div><h3>ServiceNow Certified System Administrator</h3><p class="muted">CSA certification completed · Platform fundamentals, configuration and administration.</p><div class="tags"><span class="tag">CSA</span><span class="tag">Administration</span><span class="tag">ITSM</span></div></div>
+          <div class="cert reveal"><div class="badge">✓</div><h3>ServiceNow Certified Application Developer</h3><p class="muted">CAD certification completed · Application development and platform customization.</p><div class="tags"><span class="tag">CAD</span><span class="tag">App Development</span><span class="tag">Scripting</span></div></div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill reveal"><h3>Application Development</h3><p>Scoped applications, tables, fields, roles, forms and application structure.</p></div>
+          <div class="skill reveal"><h3>Automation</h3><p>Flow Designer, workflow concepts and business process automation.</p></div>
+          <div class="skill reveal"><h3>Security</h3><p>ACL concepts, roles and access control for platform applications.</p></div>
+          <div class="skill reveal"><h3>Service Catalog</h3><p>Catalog items, user experiences and request-oriented workflows.</p></div>
+          <div class="skill reveal"><h3>Platform Scripting</h3><p>JavaScript fundamentals, GlideRecord and server-side platform logic.</p></div>
+          <div class="skill reveal"><h3>ITSM</h3><p>IT Service Management concepts, service processes and practical platform-oriented understanding.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">03 · Selected Work</div>
+        <h2>Projects that show how I build.</h2>
+        <p class="lead">A mix of ServiceNow application development and web projects, presented with emphasis on what I built and the technologies behind it.</p>
+        <div class="project-grid">
+          <article class="project featured reveal">
+            <div class="project-top"><div><div class="badge">SN</div><h3>Job Referral Management — ServiceNow Application</h3></div><span class="project-link">Featured Project ↗</span></div>
+            <p class="muted">A ServiceNow-based application designed to manage job referral information and streamline the referral-management process. Add your final workflow details, tables and screenshots here.</p>
+            <div class="tags"><span class="tag">ServiceNow</span><span class="tag">Scoped Application</span><span class="tag">Tables</span><span class="tag">Flow Designer</span><span class="tag">ACL</span><span class="tag">ITSM</span><span class="tag">JavaScript</span></div>
+          </article>
+          <article class="project reveal"><div class="badge">CC</div><h3>Code Clash</h3><p class="muted">Web project developed for a technical event. The project earned <strong>3rd Prize</strong>, demonstrating practical implementation and event-based project experience.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span></div></article>
+          <article class="project reveal"><div class="badge">AG</div><h3>Art Gallery Website</h3><p class="muted">Web-based project focused on presenting artwork through a structured and user-friendly interface. Add your final technology list and screenshots when the source is recovered.</p><div class="tags"><span class="tag">Web Development</span><span class="tag">UI</span></div></article>
+          <article class="project reveal"><div class="badge">AI</div><h3>Bone Fracture Detection System</h3><p class="muted">Computer vision project using a deep-learning workflow for fracture detection from X-ray images. Add the exact final stack and deployment details before publishing.</p><div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">CNN / YOLOv5</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-label">04 · Technical Skills</div>
+        <h2>Beyond the platform.</h2>
+        <div class="skill-grid">
+          <div class="skill reveal"><h3>Languages</h3><p>JavaScript · Python · PHP · Java fundamentals · SQL</p></div>
+          <div class="skill reveal"><h3>Frontend</h3><p>HTML · CSS · JavaScript · React.js fundamentals</p></div>
+          <div class="skill reveal"><h3>Backend</h3><p>Node.js · Express · Flask · Django · PHP</p></div>
+          <div class="skill reveal"><h3>Databases</h3><p>MySQL · MongoDB · MongoDB Atlas</p></div>
+          <div class="skill reveal"><h3>Developer Tools</h3><p>Git · GitHub · VS Code · NPM · XAMPP</p></div>
+          <div class="skill reveal"><h3>ServiceNow</h3><p>CSA · CAD · GlideRecord · Flow Designer · ACL · Service Catalog · ITSM</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-label">05 · Journey</div>
+        <h2>Education & growth.</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal"><div class="date">2026</div><h3>B.Tech — Computer Science</h3><p>Completed B.Tech in Computer Science through lateral entry with a CGPA of 8.23 under JNTUK.</p></div>
+          <div class="timeline-item reveal"><div class="date">2023</div><h3>Diploma — Computer Engineering</h3><p>Completed Diploma in Computer Engineering with 84%.</p></div>
+          <div class="timeline-item reveal"><div class="date">Current Direction</div><h3>ServiceNow Development</h3><p>Continuing practical learning in ServiceNow application development, automation, scripting and platform capabilities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <div><div class="section-label">06 · Contact</div><h2>Let's build something useful.</h2><p>If you're looking for a motivated fresher with a strong ServiceNow focus, I'd love to connect and discuss opportunities.</p></div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:vyshnavipalivela@gmail.com">Email Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/vaishnavipalivela/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/vaishnavipalivela" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer"><span>© 2026 Palivela Veera Vaishnavi Sandhya</span><span>ServiceNow · Development · Automation</span></div></footer>
+  <script>
+    const observer = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
